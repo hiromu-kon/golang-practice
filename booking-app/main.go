@@ -3,14 +3,13 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println("Hello World")
+	// var n int
+	// n = 10
 
-	var conferenceName = "Go Conference"
-	const conferenceTickets = 50
-	conferenceName = "Change ConferenceName"
-	fmt.Println("Hello", conferenceName)
-	fmt.Println(conferenceTickets)
+	// var n int = 10
 
-	var username string = "Tom"
-	fmt.Println(username)
+	var s string
+	var n int
+	var b bool
+	fmt.Println(s, n, b)
 }
