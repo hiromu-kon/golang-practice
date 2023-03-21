@@ -3,13 +3,22 @@ package main
 import "fmt"
 
 func main() {
-	// var n int
-	// n = 10
+	s := make([]int, 3, 8)
+	fmt.Println(s)
 
-	// var n int = 10
+	type HTTPStatusCode int
 
-	var s string
-	var n int
-	var b bool
-	fmt.Println(s, n, b)
+	const (
+		StatusOK                  HTTPStatusCode = 200 + iota
+		StatusBadRequest                         = 400
+		StatusUnauthorized                       = 401
+		StatusForbidden                          = 403
+		StatusNotFound                           = 404
+		StatusInternalServerError                = 500
+		StatusServiceUnavailable                 = 503
+	)
+
+	fmt.Println(StatusOK)
+	fmt.Println(StatusBadRequest)
+
 }
