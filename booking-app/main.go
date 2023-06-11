@@ -6,19 +6,17 @@ func main() {
 	s := make([]int, 3, 8)
 	fmt.Println(s)
 
-	type HTTPStatusCode int
+	student := Student{name: "Takeshi", age: 32}
+	student.changeName()
+	fmt.Println(student)
+}
 
-	const (
-		StatusOK                  HTTPStatusCode = 200 + iota
-		StatusBadRequest                         = 400
-		StatusUnauthorized                       = 401
-		StatusForbidden                          = 403
-		StatusNotFound                           = 404
-		StatusInternalServerError                = 500
-		StatusServiceUnavailable                 = 503
-	)
+type Student struct {
+	name string
+	age  int
+	_    struct{}
+}
 
-	fmt.Println(StatusOK)
-	fmt.Println(StatusBadRequest)
-
+func (s *Student) changeName() {
+	s.name = "Ito"
 }
