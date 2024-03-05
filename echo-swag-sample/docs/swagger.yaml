@@ -1,0 +1,37 @@
+basePath: /
+definitions:
+  main.Item:
+    properties:
+      text:
+        type: string
+    type: object
+  main.Response:
+    properties:
+      int64:
+        type: integer
+      string:
+        type: string
+      world:
+        $ref: '#/definitions/main.Item'
+    type: object
+info:
+  contact: {}
+  license:
+    name: license name
+  title: example
+  version: "1.0"
+paths:
+  /:
+    get:
+      operationId: HelloWorldIndex
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/main.Response'
+      summary: Hello World !
+      tags:
+      - HelloWorld
+swagger: "2.0"
